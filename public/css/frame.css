@@ -1,0 +1,39 @@
+body,
+html {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 7%; /* navbar height */
+    border-bottom: .2px solid #b3b3b3af;
+    background: blue; /* optional */
+    box-sizing: border-box;
+}
+
+.navbutton {
+    padding: 0 20px; /* spacing around each button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+#navbar-logo-container {
+    margin-right: auto; /* pushes the other nav buttons to the right */
+}
+
+#navbar-logo {
+    height: 40px; /* adjust size */
+}
