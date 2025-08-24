@@ -1,39 +1,25 @@
-body,
-html {
-    overflow-x: hidden;
-    margin: 0;
+.navbar-nav > li > a > img {
+    height: 40px;            /* match text height better */
+    width: auto;
+    vertical-align: middle;  /* aligns image with text */
+    margin-top: -2px;        /* tiny nudge if needed */
 }
 
-a {
-    text-decoration: none;
+
+.navbar-nav > li {
+    margin-right: 25px;
 }
 
-#navbar {
-    display: flex;
-    align-items: center;
-    height: 7%; /* navbar height */
-    border-bottom: .2px solid #b3b3b3af;
-    background: blue; /* optional */
-    box-sizing: border-box;
+.navbar-nav > li > a {
+    margin-top: 10px;
+
 }
 
-.navbutton {
-    padding: 0 20px; /* spacing around each button */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar-default{
+    background-color: rgb(231, 246, 247);
 }
 
-.nav-title {
-    margin: 0;
-    font-size: 16px;
-    color: black;
-}
-
-#navbar-logo-container {
-    margin-right: auto; /* pushes the other nav buttons to the right */
-}
-
-#navbar-logo {
-    height: 40px; /* adjust size */
+a{ 
+    font-weight: bold;
+    font-size: larger;
 }
