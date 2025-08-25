@@ -12,17 +12,80 @@
     <body>
         <%- include('partials/navbar'); %>
 
+        <!--Hero-->
         <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 bg-transparent">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <img src="" class="d-block mx-lg-auto img-fluid" alt="Contracts and Products Collage" width="700" height="500" loading="lazy">
                 </div>
 
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image </h1>
+                    <p class="lead ">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
             </div>
+        </div>
+
+        <!--Carousel-->
+        <div id="carouselTitle">
+            <h1>
+                Contracts Delivered
+            </h1>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper">
+                        <!-- First Card-->
+                        <div class="card" style="width: 18rem;">
+                            <div class="image-wrapper">
+                                <img src="/assets/logo.png"  alt="card-image-1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 1</h5>
+                                <p class="card-text">Some quick example text to build on the card 1 and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <!-- Second Card-->
+                        <div class="card" style="width: 18rem;">
+                            <div class="image-wrapper">
+                                <img src="/assets/logo.png"  alt="card-image-2">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 2</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <!-- Third Card-->
+                        <div class="card" style="width: 18rem;">
+                            <div class="image-wrapper">
+                                <img src="/assets/logo.png"  alt="card-image-3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    
+                </div>
+                <div class="carousel-item">
+    
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         
 

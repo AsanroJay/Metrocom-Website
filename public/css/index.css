@@ -1,0 +1,23 @@
+#carouselTitle h1{
+    margin-left: 15%;
+}
+.cards-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    margin: 0 .5em;
+    width: calc(100%/3);
+}
+
+.image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img{
+    max-width: 100%;
+    max-height: 100%;
+}
