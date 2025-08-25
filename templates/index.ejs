@@ -26,13 +26,13 @@
             </div>
         </div>
 
-        <!--Carousel-->
+        <!--Carousel Big Screen-->
         <div id="carouselTitle">
             <h1>
                 Contracts Delivered
             </h1>
         </div>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark d-none d-sm-block">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="cards-wrapper">
@@ -83,6 +83,56 @@
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!--Carousel Small Screen-->
+        <div id="carouselExampleFadeSmallScreen" class="carousel slide carousel-fade d-sm-none carousel-dark">
+            <div class="carousel-inner">
+                <div class="carousel-item active d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="image-wrapper">
+                            <img src="/assets/logo.png"  alt="card-image-1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card 1</h5>
+                            <p class="card-text">Some quick example text to build on the card 1 and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active d-flex justify-content-center">
+                     <div class="card" style="width: 18rem;">
+                        <div class="image-wrapper">
+                            <img src="/assets/logo.png"  alt="card-image-2">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="image-wrapper">
+                            <img src="/assets/logo.png"  alt="card-image-3">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeSmallScreen" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFadeSmallScreen" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
