@@ -42,8 +42,9 @@
 
 
 #products-section {
-  background: #111;
+  background: #010057;
   padding: 40px 20px;
+  width: 100%;
 }
 
 
@@ -75,7 +76,6 @@
   grid-row: 2 / 3;    /* bottom row */
 }
 
-/* Shared product card styling */
 .product-card {
   position: relative;
   display: block;
@@ -102,5 +102,15 @@
   right: 0;
   padding: 15px;
   color: white;
-  background: linear-gradient(to top, rgba(68, 68, 68, 0.7), transparent);
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.8), transparent); /* blue overlay */
+}
+
+#about-us-image {
+  width: 50%;
+  border-radius: 8px;
+
+}
+
+#ben{
+  border: 1px solid grey;
 }
