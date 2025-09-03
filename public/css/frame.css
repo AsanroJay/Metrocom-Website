@@ -20,6 +20,7 @@ a.text-reset {
 
 .navbar {
   background-color: white !important;
+  border: 0.5px solid rgb(204, 200, 200);
 }
 
 .navbar .navbar-brand,
@@ -84,7 +85,7 @@ footer.footer-custom .p-4 {
 }
 
 #navbar-banner {
-  height: 100px;
+  height: 80px;
 }
 
 #navbar-banner img{
