@@ -42,7 +42,7 @@
 
 
 #products-section {
-  background: #010048;
+  background: #0E274B;
   padding: 40px 20px;
   width: 100%;
 }
@@ -111,9 +111,6 @@
 
 }
 
-#ben{
-  border: 1px solid grey;
-}
 
 #main-carousel .carousel-item img {
   object-fit: cover;   
