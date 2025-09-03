@@ -26,12 +26,12 @@
     max-height: 100%;
 }
 
-.carousel-control-prev {
-  left: 10%; 
+#carouselExampleFade .carousel-control-prev {
+  left: 8%; 
 }
 
-.carousel-control-next {
-  right: 10%; 
+#carouselExampleFade .carousel-control-next {
+  right: 8%; 
 }
 
 #index-hero {
@@ -114,3 +114,16 @@
 #ben{
   border: 1px solid grey;
 }
+
+#main-carousel .carousel-item img {
+  object-fit: cover;   
+  width: 100%;
+  height: 650px;        
+}
+
+@media (max-width: 768px) {
+  #main-carousel .carousel-item img {
+    height: 300px;      /* shorter hero on mobile */
+  }
+}
+

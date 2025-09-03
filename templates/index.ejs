@@ -14,7 +14,7 @@
         <%- include('partials/navbar'); %>
 
         <!--Hero-->
-        <div class="container-fluid col-xxl-8 px-4 py-5 my-5" id="index-hero">
+        <!-- <div class="container-fluid col-xxl-8 px-4 py-5 my-5" id="index-hero">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5 bg-transparent">
                 <div class="col-10 col-sm-8 col-lg-6 justify-content-center">
                     <img src="/assets/logo.png" class="d-block mx-lg-auto img-fluid" alt="Contracts and Products Collage" width="700" height="500" loading="lazy">
@@ -25,12 +25,41 @@
                     <p class="lead ">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!--Carousel Big Screen-->
+        <!-- Autoscroll Carousel -->
+        <div id="main-carousel" class="carousel slide carousel-dark"  data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"  data-bs-interval="4000">
+                <img src="/assets/logo.png" class="d-block w-100" alt="carousel-img-1">
+                </div>
+                <div class="carousel-item"  data-bs-interval="4000">
+                <img src="/assets/logo.png" class="d-block w-100" alt="carousel-img-2">
+                </div>
+                <div class="carousel-item"  data-bs-interval="4000">
+                <img src="/assets/logo.png" class="d-block w-100" alt="carousel-img-3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+
+        <!-- Product Carousel Big Screen-->
         <div id="carouselTitle">
             <h1>
-                Contracts Delivered
+                Newest Products
             </h1>
         </div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark d-none d-sm-block mb-5">
@@ -154,7 +183,7 @@
         <!-- Products Section -->
         <section id="products-section">
         <div class="container my-5">
-            <h2 class="text-center text-white mb-4">Products</h2>
+            <h2 class="text-center text-white mb-4">Product Categories</h2>
             <div class="products-grid">
                 <!-- Product 1 -->
                 <a href="#" class="product-card" id="product-card-1">
