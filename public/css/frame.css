@@ -93,3 +93,21 @@ footer.footer-custom .p-4 {
   height: 100%;
   object-fit: cover;
 }
+
+#cartDropdown {
+  text-decoration: none !important;
+}
+#cartDropdown:hover {
+  text-decoration: none !important;
+}
+
+.fade-dropdown {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fade-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+}
