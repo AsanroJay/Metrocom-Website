@@ -13,4 +13,8 @@ router.get('/product-details', (req,res) => {
     res.render('product-details') //temporary, we will use /products/:id later on
 });
 
+router.get('/about-us', (req,res) =>{
+    res.render('about')
+});
+
 module.exports = router;
