@@ -17,7 +17,7 @@
 <div class="py-1" id="metroborder">
   <div class="container d-flex align-items-center justify-content-between">
     <div style="width:40px;"></div>
-    <!-- Centered Logo -->
+  
     <h1 class="m-0 text-center flex-grow-1">METROCOM</h1>
 
     <!-- Cart Dropdown -->
@@ -26,26 +26,46 @@
         <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
       </a>
 
-      <div class="dropdown-menu dropdown-menu-start p-3 fade-dropdown" aria-labelledby="cartDropdown" style="min-width: 250px;">
-        <h6 class="dropdown-header">Cart</h6>
+      <!-- Dropdown menu -->
+      <div class="dropdown-menu dropdown-menu-start p-3" 
+          aria-labelledby="cartDropdown" 
+          style="min-width: 320px;">
+         <!-- Cart Label -->
+        <div class="mb-2">
+          <strong>CART</strong>
+        </div>
+
+        <!-- Header row -->
+        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
+          <strong>Product Name</strong>
+          <strong class="text-end" style="width: 120px;">Qty</strong>
+        </div>
+
+        <!-- Items -->
         <div class="cart-items">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="name">Product 1</span>
-            <span class="quantity">50</span>
-            <button class="menu-btn" id="add-btn"></button>
-            <button class="menu-btn" id="minus-btn"></button>
-            
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="name text-truncate" style="max-width: 150px;">Product 1</span>
+            <div class="d-flex align-items-center justify-content-end gap-2" style="width: 120px;">
+              <a href="#"><i class="fa-solid fa-square-plus text-primary"></i></a>
+              <a href="#"><i class="fa-solid fa-square-minus text-danger"></i></a>
+              <span class="quantity">50</span>
+            </div>
           </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="name">Product 2</span>
-            <span class="quantity">10</span>
-            <button class="menu-btn" id="add-btn"></button>
-            <button class="menu-btn" id="minus-btn"></button>
+
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="name text-truncate" style="max-width: 150px;">Product 2</span>
+            <div class="d-flex align-items-center justify-content-end gap-2" style="width: 120px;">
+              <a href="#"><i class="fa-solid fa-square-plus text-primary"></i></a>
+              <a href="#"><i class="fa-solid fa-square-minus text-danger"></i></a>
+              <span class="quantity">10</span>
+            </div>
           </div>
         </div>
-        <div class="dropdown-divider"></div>
-        <a href="/cart" class="btn btn-primary btn-sm w-100">View Cart</a>
-      </div>
+
+      <div class="dropdown-divider"></div>
+      <a href="/cart" class="btn btn-primary btn-sm w-100">View Cart</a>
+    </div>
+
     </div>
   </div>
 </div>
