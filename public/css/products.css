@@ -122,3 +122,11 @@ body {
     background: #1d4ed8;
     transform: translateY(-2px);
 }
+
+.caret {
+    transition: transform 0.3s;
+}
+
+a[aria-expanded="true"] .caret {
+    transform: rotate(180deg);
+}
