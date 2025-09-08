@@ -111,3 +111,20 @@ footer.footer-custom .p-4 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.qty-controls {
+  width: 120px; 
+  justify-content: space-between;
+}
+
+.qty-icons i {
+  font-size: 1.2rem;   
+  vertical-align: middle;
+}
+
+.quantity {
+  display: inline-block;
+  min-width: 24px;      
+  text-align: center;
+}
+
