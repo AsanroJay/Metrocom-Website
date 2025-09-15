@@ -138,13 +138,24 @@ footer.footer-custom .p-4 {
     pointer-events: none;  /* disable click */
   }
 
+.dropdown .dropdown-menu {
+    opacity: 0;
+    transform: scale(0.95);
+    transform-origin: top right;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block; 
+    visibility: hidden;
+  }
+
   .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-  left: auto !important;
-  right: 0 !important;
-  transform: none !important;
-}
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    margin-top: 0;
+    left: auto !important;
+    right: 0 !important;
+    transform-origin: top right;
+  }
 }
 
 
