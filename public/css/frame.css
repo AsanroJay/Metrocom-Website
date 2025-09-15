@@ -134,20 +134,17 @@ footer.footer-custom .p-4 {
 
 @media (min-width: 992px) {  /* Mobile Clickable Cart*/
   
+  #cartDropdown {
+    pointer-events: none;  /* disable click */
+  }
+
   .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
   left: auto !important;
   right: 0 !important;
   transform: none !important;
-  pointer-events: none;
 }
-}
-
-@media (min-width: 992px) {
-  #cartDropdown {
-    pointer-events: none;  /* disable click */
-  }
 }
 
 
