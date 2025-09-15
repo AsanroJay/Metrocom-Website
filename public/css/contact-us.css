@@ -1,0 +1,28 @@
+.contact-section {
+  background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+  color: #0E274B; /* primary blue */
+  font-weight: 700;
+}
+
+.contact-form {
+  background: white;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 150px;
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+  color: #0E274B;
+}
+
+.contact-form .btn-primary {
+  background-color: #0E274B;
+  border: none;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #588CBE; /* secondary blue */
+}

@@ -10,8 +10,59 @@
         <link rel="stylesheet" href="/css/frame.css">
     </head>
     <body>
-        <%- include('partials/navbar'); %>
-    
-        <%- include('partials/footer'); %>
+    <%- include('partials/navbar'); %>
+
+    <section class="contact-section py-5">
+        <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center text-muted mb-5">
+            We'd love to hear from you. Please fill out the form below and we’ll get back to you shortly.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+            <form action="/contact" method="POST" class="p-4 rounded shadow-sm contact-form">
+                <!-- Name -->
+                <div class="mb-3">
+                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <!-- Company -->
+                <div class="mb-3">
+                <label for="company" class="form-label">Company</label>
+                <input type="text" class="form-control" id="company" name="company">
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="mb-3">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="contact" name="contact">
+                </div>
+
+                <!-- Inquiry -->
+                <div class="mb-3">
+                <label for="inquiry" class="form-label">Inquiry <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="inquiry" name="inquiry" rows="4" required></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary px-4">Submit</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer'); %>
     </body>
+
 </html>
