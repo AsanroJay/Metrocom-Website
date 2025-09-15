@@ -14,7 +14,11 @@ router.get('/product-details', (req,res) => {
 });
 
 router.get('/about-us', (req,res) =>{
-    res.render('about')
+    res.render('about-us')
+});
+
+router.get('/contact-us', (req,res) =>{
+    res.render('contact-us')
 });
 
 module.exports = router;
