@@ -140,8 +140,15 @@ footer.footer-custom .p-4 {
   left: auto !important;
   right: 0 !important;
   transform: none !important;
+  pointer-events: none;
+}
 }
 
+@media (min-width: 992px) {
+  #cartDropdown {
+    pointer-events: none;  /* disable click */
+  }
 }
+
 
 
