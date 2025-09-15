@@ -91,7 +91,6 @@ body {
 }
 
 
-
 .cart-btn:hover {
     background: #1d4ed8;
     color: white;
@@ -109,4 +108,8 @@ a[aria-expanded="true"] .caret {
 .product-card:hover .cart-btn {
     opacity: 1;
     pointer-events: auto;    /* make clickable */
+}
+
+.d-block {
+    text-decoration: none;
 }
