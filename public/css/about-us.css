@@ -1,0 +1,30 @@
+body {
+  background-color: #ffffff; 
+}
+
+.about-top h1 {
+  color: #0E274B; 
+  font-size: 2.5rem;
+}
+
+.about-top p {
+  font-size: 1.1rem;
+}
+
+.about-top {
+    background-color: #e0e0e0;
+}
+
+
+h2, h5 {
+  color: #0E274B;
+}
+
+
+.text-primary-blue {
+  color: #0E274B !important;
+}
+
+.features{
+    background-color: #e0e0e0;
+}
