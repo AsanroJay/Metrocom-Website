@@ -21,4 +21,8 @@ router.get('/contact-us', (req,res) =>{
     res.render('contact-us')
 });
 
+router.get('/cart', (req,res) =>{
+    res.render('cart')
+});
+
 module.exports = router;
