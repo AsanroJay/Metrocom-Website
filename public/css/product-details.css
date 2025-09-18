@@ -13,3 +13,22 @@
         .thumbnail:hover, .thumbnail.active {
             opacity: 1;
         }
+
+#product-container {
+    padding-bottom: 250px;
+}
+/* Product Image Styling */
+#product-image {
+    width: 100%;
+    max-width: 500px;    
+    height: 500px;        
+    object-fit: contain;  
+    display: block;
+    margin: 0 auto;      
+    background: #f8f9fa;  
+    border-radius: 8px;
+}
+
+#back-button {
+    padding-bottom: 20px;
+}
