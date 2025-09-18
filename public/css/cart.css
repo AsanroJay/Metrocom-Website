@@ -81,3 +81,7 @@ body {
 .cart-items {
   padding-bottom: 30px;
 }
+
+.cart-sku {
+    font-style:italic;
+}
