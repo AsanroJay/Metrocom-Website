@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+.sidebar {
+    width: 220px;
+    background-color: #343a40;
+    padding-top: 1rem;
+    flex-shrink: 0;
+    height: 100vh;
+}
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #f8f9fa;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.custom-link {
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #f8f9fa;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .custom-link:hover {
+    background-color: #495057; /* subtle dark grey */
+    color: #ffffff;
+  }
+
+  .custom-link.active {
+    background-color: #6c757d; /* muted grey for active */
+    color: #fff;
+    font-weight: 500;
+  }
