@@ -9,14 +9,138 @@
 </head>
 <body>
     <div class="admin-wrapper">
-    <!-- Sidebar -->
-    <%- include('partials/sidebar') %>
+        <!-- Sidebar -->
+        <%- include('partials/sidebar') %>
 
-    <!-- Page Content -->
-    <div class="content">
+        <!-- Page Content -->
+        <div class="content">
+        <div class="container pb-5 mb-2" style="margin-left:240px; padding-top:30px;">
+            <h3 class="mb-4">Quota Details</h3>
 
-        
+            <form action="#" method="POST">
+            <!-- Example Product 1 -->
+            <div class="cart-item d-md-flex justify-content-between align-items-center border-bottom py-3">
+                <div class="px-3 my-2 d-flex align-items-center">
+                <div class="cart-item-product-thumb me-3">
+                    <img src="/assets/logo.png" 
+                        alt="Product 1" 
+                        style="width:80px; height:80px; object-fit:cover;">
+                </div>
+                <div class="cart-item-product-info">
+                    <h5 class="cart-item-product-title mb-1">Sample Product One</h5>
+                    <small class="text-muted">SKU: ABC123</small><br>
+                    <small class="text-muted">Qty: <span class="product-qty">10</span></small>
+                </div>
+                </div>
+
+                <!-- Pricing Controls -->
+                <div class="d-flex align-items-center px-3 my-2 text-center">
+
+                    <!-- Dropdown -->
+                    <div class="me-3 text-start">
+                        <label class="small mb-1">Pricing</label>
+                        <select class="form-select form-select-sm pricing-mode">
+                            <option value="fixed">Fixed Price</option>
+                            <option value="margin">Margin</option>
+                        </select>
+                    </div>
+                    <!-- Base Price (hidden until Margin mode) -->
+                    <div class="me-3 text-start base-price-wrapper" style="display:none;">
+                        <label class="small mb-1">Base Price</label>
+                        <input type="number" step="0.01" class="form-control form-control-sm base-price"
+                            placeholder="Base Price"
+                            style="max-width:120px;">
+                    </div>
+                    <!-- Custom Price / Margin -->
+                    <div class="me-3 text-start">
+                        <label class="small mb-1 custom-label">Custom Price</label>
+                        <input type="number" step="0.01" class="form-control form-control-sm custom-price"
+                        placeholder="Enter value" style="max-width:120px;">
+                    </div>
+
+                <!-- Price Per Product -->
+                <div class="me-3 text-start">
+                    <label class="small mb-1">Price / Unit</label>
+                    <div class="fw-bold unit-price">₱0.00</div>
+                </div>
+
+                <!-- Total Price -->
+                <div class="text-start">
+                    <label class="small mb-1">Total</label>
+                    <div class="fw-bold total-price">₱0.00</div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Example Product 2 -->
+            <div class="cart-item d-md-flex justify-content-between align-items-center border-bottom py-3">
+                <div class="px-3 my-2 d-flex align-items-center">
+                <div class="cart-item-product-thumb me-3">
+                    <img src="/assets/logo.png" 
+                        alt="Product 2" 
+                        style="width:80px; height:80px; object-fit:cover;">
+                </div>
+                <div class="cart-item-product-info">
+                    <h5 class="cart-item-product-title mb-1">Sample Product Two</h5>
+                    <small class="text-muted">SKU: XYZ789</small><br>
+                    <small class="text-muted">Qty: <span class="product-qty">5</span></small>
+                </div>
+                </div>
+
+                <!-- Pricing Controls -->
+                <div class="d-flex align-items-center px-3 my-2 text-center">
+
+                    
+                    <!-- Dropdown -->
+                    <div class="me-3 text-start">
+                        <label class="small mb-1">Pricing</label>
+                        <select class="form-select form-select-sm pricing-mode">
+                            <option value="fixed">Fixed Price</option>
+                            <option value="margin">Margin</option>
+                        </select>
+                    </div>
+                    <!-- Base Price (hidden until Margin mode) -->
+                    <div class="me-3 text-start base-price-wrapper" style="display:none;">
+                        <label class="small mb-1">Base Price</label>
+                        <input type="number" step="0.01" class="form-control form-control-sm base-price"
+                            placeholder="Base Price"
+                            style="max-width:120px;">
+                    </div>
+                    
+                    <!-- Custom Price / Margin -->
+                <div class="me-3 text-start">
+                    <label class="small mb-1 custom-label">Custom Price</label>
+                    <input type="number" step="0.01" class="form-control form-control-sm custom-price"
+                        placeholder="Enter value" style="max-width:120px;">
+                </div>
+
+                <!-- Price Per Product -->
+                <div class="me-3 text-start">
+                    <label class="small mb-1">Price / Unit</label>
+                    <div class="fw-bold unit-price">₱0.00</div>
+                </div>
+
+                <!-- Total Price -->
+                <div class="text-start">
+                    <label class="small mb-1">Total</label>
+                    <div class="fw-bold total-price">₱0.00</div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Save/Back Buttons -->
+            <div class="row pt-4">
+                <div class="col-sm-6 mb-3">
+                <a class="btn btn-secondary btn-block" href="#">Back to Quotas</a>
+                </div>
+                <div class="col-sm-6 mb-3">
+                <button type="submit" class="btn btn-primary btn-block">Save Prices</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
     </div>
-    </div>
+    <script src="/js/quota.js" defer></script>
 </body>
 </html>
