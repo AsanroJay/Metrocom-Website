@@ -1,0 +1,16 @@
+
+#productsTable td:nth-child(2),
+#productsTable th:nth-child(2) {
+  padding-left: 0.5rem;
+  width: 150px; 
+}
+
+#productsTable td,
+#productsTable th {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+#productsTable td:first-child img {
+  margin-right: 0.75rem; 
+}
