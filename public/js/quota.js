@@ -1,3 +1,14 @@
+function formatCurrency(value) {
+  if (value <= 900000000) {
+    return `₱${value.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}`;
+  } else {
+    // Beyond 900 million, use scientific notation
+    return `₱${value.toExponential(2)}`;
+  }
+}
 document.addEventListener("DOMContentLoaded", () => {
   const selects = document.querySelectorAll(".pricing-mode");
 
@@ -23,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const total = perProduct * qty;
-      perProductEl.textContent = `₱${perProduct.toFixed(2)}`;
-      totalEl.textContent = `₱${total.toFixed(2)}`;
+      perProductEl.textContent = formatCurrency(perProduct);
+      totalEl.textContent = formatCurrency(total);
     }
 
     // Mode switch

@@ -1,0 +1,54 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.3fr 0.8fr;
+  align-items: center;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.product-info img {
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cart-item {
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cart-item:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.unit-price,
+.total-price {
+  display: inline-block;
+  min-width: 160px; /* enough space for ₱900,000,000.00 */
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: monospace; /* keeps digits equal width */
+  white-space: nowrap; /* never wraps */
+  font-size: 0.95rem;
+}
+
+.price-summary {
+  text-align: right;
+}
+
+.price-summary label {
+  display: block;
+  text-align: right;
+  margin-bottom: 2px;
+}
