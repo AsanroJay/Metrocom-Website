@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     responsive: true
   });
 
+  $('#productsTable').show();
+
   const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
 
   // Edit button click
