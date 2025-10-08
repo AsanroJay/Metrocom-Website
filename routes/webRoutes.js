@@ -6,7 +6,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/products', (req,res) => {
-    res.render('products')
+    res.render('products', {products: sampleProducts})
 });
 
 router.get('/product-details', (req,res) => {
@@ -24,5 +24,42 @@ router.get('/contact-us', (req,res) =>{
 router.get('/cart', (req,res) =>{
     res.render('cart')
 });
+
+
+const sampleProducts = [
+  {
+    _id: "1",
+    name: "Metrocom Office Chair",
+    sku: "MC-CHAIR-001",
+    category: "Furniture",
+    subcategory: "Chair",
+    image: "/assets/logo.png"
+  },
+  {
+    _id: "2",
+    name: "Metrocom Desk Lamp",
+    sku: "MC-LAMP-002",
+    category: "Furniture",
+    subcategory: "Miscellaneous",
+    image: "/assets/logo.png"
+  },
+  {
+    _id: "3",
+    name: "Metrocom Filing Cabinet",
+    sku: "MC-CAB-003",
+    category: "Furniture",
+    subcategory: "Cabinets",
+    image: "/assets/logo.png"
+
+  },
+   {
+    _id: "4",
+    name: "Metrocom 4",
+    sku: "MC-LAMP-004",
+    category: "Furniture",
+    subcategory: "Miscellaneous",
+    image: "/assets/logo.png"
+  },
+];
 
 module.exports = router;
