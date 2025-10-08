@@ -22,3 +22,35 @@
 .add-item-btn:hover {
   background-color: rgb(190, 190, 190);
 }
+
+#mainImageContainer.dragover {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+}
+
+#additionalImages img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.additional-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.additional-img-wrapper button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

@@ -1,4 +1,93 @@
+function setupAddProductModal() {
+  const mainImageContainer = document.getElementById('mainImageContainer');
+  const mainPreview = document.getElementById('mainPreview');
+  const removeMainImage = document.getElementById('removeMainImage');
+  const mainPlaceholder = document.getElementById('mainPlaceholder');
+  const additionalImages = document.getElementById('additionalImages');
+  const addImageBox = document.getElementById('addImageBox');
+  const imageInput = document.getElementById('imageInput');
+  const uploadImagesBtn = document.getElementById('uploadImagesBtn');
+
+  let mainImageFile = null;
+  let additionalImageFiles = [];
+
+  // Drag & drop for main image
+  mainImageContainer.addEventListener('click', () => imageInput.click());
+  mainImageContainer.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    mainImageContainer.classList.add('dragover');
+  });
+  mainImageContainer.addEventListener('dragleave', () => {
+    mainImageContainer.classList.remove('dragover');
+  });
+  mainImageContainer.addEventListener('drop', (e) => {
+    e.preventDefault();
+    mainImageContainer.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith('image/')) {
+      mainImageFile = file;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        mainPreview.src = event.target.result;
+        mainPreview.style.display = 'block';
+        mainPlaceholder.style.display = 'none';
+        removeMainImage.classList.remove('d-none');
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  removeMainImage.addEventListener('click', () => {
+    mainImageFile = null;
+    mainPreview.src = '';
+    mainPreview.style.display = 'none';
+    removeMainImage.classList.add('d-none');
+    mainPlaceholder.style.display = 'block';
+  });
+
+  // Additional image uploads
+  addImageBox.addEventListener('click', () => imageInput.click());
+
+  imageInput.addEventListener('change', (e) => {
+    const files = Array.from(e.target.files);
+    files.forEach((file) => {
+      if (file.type.startsWith('image/') && additionalImageFiles.length < 3) {
+        additionalImageFiles.push(file);
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const wrapper = document.createElement('div');
+          wrapper.classList.add('additional-img-wrapper');
+          wrapper.innerHTML = `
+            <img src="${event.target.result}" alt="Additional Image">
+            <button type="button">&times;</button>
+          `;
+          wrapper.querySelector('button').addEventListener('click', () => {
+            additionalImageFiles = additionalImageFiles.filter((f) => f !== file);
+            wrapper.remove();
+          });
+          additionalImages.insertBefore(wrapper, addImageBox);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  });
+
+  // Upload button (optional)
+  uploadImagesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Images ready to upload');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', setupAddProductModal);
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  //Add Item Modal
+  setupAddProductModal();
   // Initialize DataTable
   $('#productsTable').DataTable({
     pageLength: 10,

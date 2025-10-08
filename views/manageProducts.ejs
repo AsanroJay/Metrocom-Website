@@ -19,7 +19,7 @@
         <div class="content" style="margin-left:240px; padding:30px;">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="mb-0">Manage Products</h3>
-            <button class="btn btn-md add-item-btn">
+            <button class="btn btn-md add-item-btn"  data-bs-toggle="modal" data-bs-target="#addProductModal">
                 Add Product
             </button>
         </div>
@@ -118,7 +118,7 @@
                     <option value="available">Available</option>
                     <option value="unavailable">Unavailable</option>
                     <option value="discontinued">Discontinued</option>
-                    <option value="out of order">Out of Order</option>
+                    <option value="out of order">Out of Stock</option>
                     </select>
                 </div>
 
@@ -168,6 +168,121 @@
             </form>
         </div>
         </div>
+    </div>
+
+
+    <!-- Add Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <form id="addProductForm" enctype="multipart/form-data">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+            <!-- Product Images -->
+            <div class="mb-3">
+            <label class="form-label fw-bold">Product Images</label>
+
+            <!-- Main Image -->
+            <div class="mb-3">
+                <label class="form-label">Main Image</label>
+                <div id="mainImageContainer" class="position-relative rounded border p-2 d-flex justify-content-center align-items-center" style="width:100%; min-height:200px; border-style:dashed; cursor:pointer;">
+                <img id="mainPreview" src="" alt="Main Image" class="img-fluid rounded" style="max-height:250px; display:none; object-fit:cover;">
+                <button type="button" id="removeMainImage" class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 d-none">
+                    ✕ Remove
+                </button>
+                <span id="mainPlaceholder" class="text-muted">Click or drag an image here</span>
+                </div>
+            </div>
+
+            <!-- Additional Images -->
+            <div class="mb-3">
+                <label class="form-label">Additional Images</label>
+                <div id="additionalImages" class="d-flex flex-wrap gap-2">
+                <!-- Thumbnails inserted dynamically -->
+                <div id="addImageBox"
+                    class="border border-2 border-dashed rounded d-flex justify-content-center align-items-center"
+                    style="width:100px; height:100px; cursor:pointer;">
+                    <span class="fs-4 text-muted">+</span>
+                </div>
+                </div>
+            </div>
+
+            <input type="file" id="imageInput" multiple accept="image/*" hidden>
+            
+            <small class="text-muted d-block mt-2">
+                First image will be used as the main display. You can add up to 3 additional images.
+            </small>
+            </div>
+
+
+
+            <!-- Row 1 -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                <label for="addProductName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="addProductName" name="name" required>
+                </div>
+                <div class="col-md-6">
+                <label for="addProductSKU" class="form-label">SKU</label>
+                <input type="text" class="form-control" id="addProductSKU" name="sku" required>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                <label for="addProductStatus" class="form-label">Status</label>
+                <select class="form-select" id="addProductStatus" name="status" required>
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                    <option value="discontinued">Discontinued</option>
+                    <option value="out of order">Out of Stock</option>
+                </select>
+                </div>
+                <div class="col-md-6">
+                <label for="addProductCategory" class="form-label">Category</label>
+                <input type="text" class="form-control" id="addProductCategory" name="category">
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                <label for="addProductSubcategory" class="form-label">Subcategory</label>
+                <input type="text" class="form-control" id="addProductSubcategory" name="subcategory">
+                </div>
+                <div class="col-md-6">
+                <label for="addProductCardDesc" class="form-label">Card Description</label>
+                <input type="text" class="form-control" id="addProductCardDesc" name="card_description">
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                <label for="addProductColors" class="form-label">Colors (comma-separated)</label>
+                <input type="text" class="form-control" id="addProductColors" name="color">
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label for="addProductDescription" class="form-label">Descriptions (one per line)</label>
+                <textarea class="form-control" id="addProductDescription" name="description" rows="3"></textarea>
+            </div>
+            </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-success">Add Product</button>
+            </div>
+        </form>
+        </div>
+    </div>
     </div>
 
     <!-- Scripts -->
