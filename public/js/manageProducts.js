@@ -8,6 +8,13 @@ function setupAddProductModal() {
   const imageInput = document.getElementById('imageInput');
   const uploadImagesBtn = document.getElementById('uploadImagesBtn');
 
+  if (!mainImageContainer || !mainPreview || !removeMainImage || 
+    !mainPlaceholder || !additionalImages || !addImageBox || 
+    !imageInput || !uploadImagesBtn) {
+    console.warn("Add Product Modal elements not found — skipping modal setup.");
+    return;
+  }
+  
   let mainImageFile = null;
   let additionalImageFiles = [];
 
@@ -78,9 +85,6 @@ function setupAddProductModal() {
     alert('Images ready to upload');
   });
 }
-
-document.addEventListener('DOMContentLoaded', setupAddProductModal);
-
 
 
 
