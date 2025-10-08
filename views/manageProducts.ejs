@@ -17,47 +17,70 @@
         <%- include('partials/sidebar') %>
 
         <div class="content" style="margin-left:240px; padding:30px;">
-        <h3 class="mb-4">Manage Products</h3>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">Manage Products</h3>
+            <button class="btn btn-md add-item-btn">
+                Add Product
+            </button>
+        </div>
 
         <!-- Products Table -->
         <div class="table-responsive">
-        <table id="productsTable" class="table table-striped align-middle" style="table-layout: fixed; width: 100%; display:none;">
+            <table id="productsTable" class="table table-striped align-middle" style="table-layout: fixed; width: 100%; display:none;">
             <thead class="table-light">
-            <tr>
-                <th style="width: 45%;">Product</th>
-                <th style="width: 40%;">SKU</th>
-                <th class="text-center" style="width: 25%;">Actions</th>
-            </tr>
+                <tr>
+                <th style="width: 40%;">Product</th>
+                <th style="width: 15%;">SKU</th>
+                <th style="width: 15%;">Category</th>
+                <th style="width: 15%;">Subcategory</th>
+                <th class="text-center" style="width: 15%;">Actions</th>
+                </tr>
             </thead>
             <tbody>
-            <% products.forEach(product => { %>
-            <tr data-id="<%= product._id %>">
-                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                <div class="d-flex align-items-center">
-                    <img src="<%= (product.images && product.images[0]) || '/assets/logo.png' %>" 
+                <% products.forEach(product => { %>
+                <tr data-id="<%= product._id %>">
+                    <!-- Product -->
+                    <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                    <div class="d-flex align-items-center">
+                        <img 
+                        src="<%= (product.images && product.images[0]) || '/assets/logo.png' %>" 
                         alt="Product Image"
                         class="me-3 rounded"
                         style="width:50px; height:50px; object-fit:cover;">
-                    <div>
-                    <strong><%= product.name %></strong>
+                        <div>
+                        <strong><%= product.name %></strong>
+                        </div>
                     </div>
-                </div>
-                </td>
-                <td class="align-middle text-start" style="white-space: nowrap;">
-                <%= product.sku %>
-                </td>
-                <td class="text-center align-middle">
-                <button class="btn btn-sm btn-outline-primary edit-btn" data-id="<%= product._id %>">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-                <button class="btn btn-sm btn-outline-danger delete-btn" data-id="<%= product._id %>">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
-                </td>
-            </tr>
-            <% }) %>
+                    </td>
+
+                    <!-- SKU -->
+                    <td class="align-middle text-start" style="white-space: nowrap;">
+                    <%= product.sku %>
+                    </td>
+
+                    <!-- Category -->
+                    <td class="align-middle text-start" style="white-space: nowrap;">
+                    <%= product.category || '—' %>
+                    </td>
+
+                    <!-- Subcategory -->
+                    <td class="align-middle text-start" style="white-space: nowrap;">
+                    <%= product.subcategory || '—' %>
+                    </td>
+
+                    <!-- Actions -->
+                    <td class="text-center align-middle">
+                    <button class="btn btn-sm btn-outline-primary edit-btn" data-id="<%= product._id %>">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger delete-btn" data-id="<%= product._id %>">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    </td>
+                </tr>
+                <% }) %>
             </tbody>
-        </table>
+            </table>
         </div>
     </div>
 

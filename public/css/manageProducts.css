@@ -14,3 +14,11 @@
 #productsTable td:first-child img {
   margin-right: 0.75rem; 
 }
+
+.add-item-btn {
+  background-color: rgba(242, 242, 242);
+}
+
+.add-item-btn:hover {
+  background-color: rgb(190, 190, 190);
+}
