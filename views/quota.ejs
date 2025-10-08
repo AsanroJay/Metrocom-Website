@@ -65,14 +65,15 @@
             <h4 class="mb-4">Quota Contents</h4>
             <form action="#" method="POST">
             <!-- Product 1 -->
+            <% products.forEach(product => { %>
             <div class="cart-item my-3">
                 <div class="product-grid">
                 <!-- Product Info -->
                 <div class="product-info d-flex align-items-center">
                     <img src="/assets/logo.png" alt="Product 1" class="me-3">
                     <div>
-                    <h5 class="mb-1">Sample Product One</h5>
-                    <small class="text-muted d-block">SKU: ABC123</small>
+                    <h5 class="mb-1"><%= product.name %></h5>
+                    <small class="text-muted d-block">SKU: <%= product.sku %></small>
                     <small class="text-muted">Qty: <span class="product-qty">10</span></small>
                     </div>
                 </div>
@@ -113,56 +114,7 @@
                 </div>
                 </div>
             </div>
-
-            <!-- Product 2 -->
-            <div class="cart-item my-3">
-                <div class="product-grid">
-                <!-- Product Info -->
-                <div class="product-info d-flex align-items-center">
-                    <img src="/assets/logo.png" alt="Product 2" class="me-3">
-                    <div>
-                    <h5 class="mb-1">Sample Product Two</h5>
-                    <small class="text-muted d-block">SKU: XYZ789</small>
-                    <small class="text-muted">Qty: <span class="product-qty">5</span></small>
-                    </div>
-                </div>
-
-                <!-- Pricing Controls -->
-                <div class="pricing-controls d-flex align-items-center">
-                    <div class="me-3 text-start">
-                    <label class="small mb-1">Pricing</label>
-                    <select class="form-select form-select-sm pricing-mode">
-                        <option value="fixed">Fixed Price</option>
-                        <option value="margin">Margin</option>
-                    </select>
-                    </div>
-
-                    <div class="me-3 text-start base-price-wrapper" style="display:none;">
-                    <label class="small mb-1">Base Price</label>
-                    <input type="number" step="0.01" class="form-control form-control-sm base-price"
-                            placeholder="Base Price" style="max-width:120px;">
-                    </div>
-
-                    <div class="text-start">
-                    <label class="small mb-1 custom-label">Custom Price</label>
-                    <input type="number" step="0.01" class="form-control form-control-sm custom-price"
-                            placeholder="Enter value" style="max-width:120px;">
-                    </div>
-                </div>
-
-                <!-- Price Summary -->
-                <div class="price-summary d-flex align-items-center justify-content-around">
-                    <div class="text-start me-3">
-                    <label class="small mb-1">Price / Unit</label>
-                    <div class="fw-bold unit-price">₱0.00</div>
-                    </div>
-                    <div class="text-start">
-                    <label class="small mb-1">Total</label>
-                    <div class="fw-bold total-price">₱0.00</div>
-                    </div>
-                </div>
-                </div>
-            </div>
+            <% }) %>
 
             <!-- Save/Back Buttons -->
             <div class="row pt-4">
