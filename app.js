@@ -5,6 +5,7 @@ const webRoutes = require('./routes/webRoutes')
 const adminRoutes = require('./routes/adminRoutes')
 const connectDB = require('./config/connect')
 
+
 const PORT = process.env.PORT || 3000
 
 
@@ -18,7 +19,7 @@ app.use('/',webRoutes) //mount webRoutes on '/'
 app.use('/admin',adminRoutes)
 
 
-// connectDB(); //connect to MongoDB
+connectDB(); //connect to MongoDB
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
