@@ -158,5 +158,16 @@ footer.footer-custom .p-4 {
   }
 }
 
+/* Prevent horizontal overflow from oversized media and ensure images are responsive */
+html, body {
+  overflow-x: hidden;
+}
+
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 

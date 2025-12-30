@@ -5,14 +5,16 @@
     margin-top: 1%;
 }
 .cards-wrapper{
-    display: flex;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card{
-    margin: 0 .5em;
-    width: calc(100%/3);
+  margin: 0;
+  max-width: calc((100% - 2rem)/3);
 }
 
 .image-wrapper{
