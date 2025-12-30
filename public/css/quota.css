@@ -1,6 +1,6 @@
 .product-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1.3fr 0.8fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   column-gap: 2rem;
   row-gap: 1rem;
@@ -60,7 +60,7 @@
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  max-width: 800px; /* <-- narrower width */
+  max-width: 100%;
 }
 
 .customer-info h5 {
@@ -77,5 +77,48 @@
 }
 
 .searchID {
-    max-width: 800px; /* <-- narrower width */
+    max-width: 100%;
+}
+
+/* Prevent horizontal overflow for admin content that uses a left sidebar */
+.admin-wrapper .content .container {
+  box-sizing: border-box;
+  margin-left: 300px; /* matches inline layout in quota.ejs for desktop */
+  max-width: calc(100% - 300px);
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 992px) {
+  .admin-wrapper .content .container {
+    margin-left: 0 !important;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+  }
+}
+
+/* Ensure images and media don't force horizontal scroll */
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Save Prices button styling */
+.save-prices-btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  min-width: 160px;
+}
+
+@media (max-width: 576px) {
+  .save-prices-btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
