@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mode switch
     select.addEventListener("change", () => {
       if (select.value === "margin") {
-        label.textContent = "Custom Margin (%)";
+        label.textContent = "Margin (%)";
         input.placeholder = "Enter %";
         baseWrapper.style.display = "block";
       } else {
-        label.textContent = "Custom Price";
+        label.textContent = "Price";
         input.placeholder = "Enter value";
         baseWrapper.style.display = "none";
       }
